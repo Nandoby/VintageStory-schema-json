@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "FoodNutritionProperties",
+  "$id": "FoodNutritionProperties.json",
+  "type": "object",
+  "properties": {
+    "foodCategory": {
+      "description": "The category of the food",
+      "allOf": [
+        {
+          "$ref": "./EnumFoodCategory.json#"
+        }
+      ]
+    },
+    "satiety": {
+      "description": "The saturation restored by the food",
+      "type": "number",
+      "format": "float"
+    },
+    "eatenStack": {
+      "description": "When an instance of this collectible is eaten, what item stack should be returned to the player? Possible example: Eating a 'meat on a stick' item would return a single stick. (Note: Bowl meals/liquids are specially designed to do this through their attributes and class.",
+      "allOf": [
+        {
+          "$ref": "./JsonItemStack.json#"
+        }
+      ]
+    },
+    "health": {
+      "description": "The health restored by the food. Usually actually used to hurt the player with negative values.",
+      "type": "number",
+      "format": "float"
+    },
+    "intoxication": {
+      "description": "How much eating this will affect the player's intoxication. (0..1)",
+      "type": "number",
+      "format": "float"
+    },
+    "psychedelic": {
+      "description": "How much eating this will affect the player's psychedelic perception. (0.1)",
+      "type": "number",
+      "format": "float"
+    },
+    "saturationLossDelay": {
+      "description": "The delay before that extra saturation starts to go away.",
+      "type": "number",
+      "format": "float"
+    },
+    "saturation": {
+      "description": "Obsolete - Please use Satiety instead.",
+      "type": "number",
+      "format": "float"
+    }
+  }
+}

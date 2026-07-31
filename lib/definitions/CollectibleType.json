@@ -146,6 +146,10 @@
         "nutritionProps": {
           "$ref": "./FoodNutritionProperties.json#"
         },
+        "nutritionPropsByType": {
+          "type": "object",
+          "additionalProperties": { "$ref": "./FoodNutritionProperties.json#" }
+        },
         "particleProperties": {
           "type": "array",
           "description": "Particles that should spawn in regular intervals from this block or item when held in hands",
