@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "NoWind",
+      "title": "NoWind",
+      "description": "Not affected by wind"
+    },
+    {
+      "const": "WeakWind",
+      "title": "WeakWind",
+      "description": "Slightly affected by wind. Wiggle + Height bend based on ground distance"
+    },
+    {
+      "const": "NormalWind",
+      "title": "NormalWind",
+      "description": "Normally affected by wind. Wiggle + Height bend based on ground distance."
+    },
+    {
+      "const": "Leaves",
+      "title": "Leaves",
+      "description": "Same as normal wind, but with some special behavior for leaves. Wiggle + Height bend based on ground distance."
+    },
+    {
+      "const": "Bend",
+      "title": "Bend",
+      "description": "Same as normal wind, but no wiggle. Weak height bend based on ground distance."
+    },
+    {
+      "const": "TallBend",
+      "title": "TallBend",
+      "description": "Bend behavior for tall plants"
+    },
+    {
+      "const": "Water",
+      "title": "Water",
+      "description": "Vertical Wiggle"
+    },
+    {
+      "const": "ExtraWeakWind",
+      "title": "ExtraWeakWind"
+    },
+    {
+      "const": "Fruit",
+      "title": "Fruit"
+    },
+    {
+      "const": "WeakWindNoBend",
+      "title": "WeakWindNoBend"
+    },
+    {
+      "const": "WeakWindInverseBend",
+      "title": "WeakWindInverseBend"
+    },
+    {
+      "const": "WaterPlant",
+      "text": "WaterPlant"
+    }
+  ]
+}

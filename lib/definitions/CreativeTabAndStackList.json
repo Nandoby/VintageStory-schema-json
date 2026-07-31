@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CreativeTabAndStackList",
+  "$id": "CreativeTabAndStackList.json",
+  "type": "object",
+  "properties": {
+    "stacks": {
+      "description": "A list of item stacks to put in tabs. Note that every itemstack here will be placed in every Tabs entry",
+      "allOf": [
+        {
+          "$ref": "./JsonItemStack.json#"
+        }
+      ]
+    },
+    "tabs": {
+      "description": "A list of creative tabs to put items into. Note that all itemstacks in Stacks will be placed in all tabs.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

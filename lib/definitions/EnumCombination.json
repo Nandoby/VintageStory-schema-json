@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumCombination",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "Add",
+      "title": "Add",
+      "description": "This variant type will ignore all other variant types. Each state is appended onto the object's code, without any other variant types."
+    },
+    {
+      "const": "Multiply",
+      "title": "Multiply",
+      "description": "Default behavior - This variant's states will be enumerated with all other variant states that have this combination."
+    },
+    {
+      "const": "SelectiveMultiply",
+      "title": "SelectiveMultiply",
+      "description": "This variant's states will be enumerated only with the selected variant group. You must select another variant code using the 'onVariant' property."
+    }
+  ]
+}

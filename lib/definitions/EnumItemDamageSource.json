@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumItemDamageSource",
+  "$id": "EnumItemDamageSource.json",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "BlockBreaking",
+      "title": "BlockBreaking",
+      "description": "The item was breaking a block."
+    },
+    {
+      "const": "Attacking",
+      "title": "Attacking",
+      "description": "The item was attacking a creature"
+    },
+    {
+      "const": "Fire",
+      "title": "Fire",
+      "description": "Unused. The item was thrown into a fire."
+    }
+  ]
+}

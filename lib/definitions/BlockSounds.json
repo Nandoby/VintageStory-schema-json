@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "BlockSounds",
+  "type": "object",
+  "properties": {
+    "ambient": {
+      "type": "string",
+      "description": "Played in ambience for this block."
+    },
+    "ambientBlockCount": {
+      "type": "number",
+      "format": "float",
+      "description": "Amount of nearby ambient sound blocks in order to reach full ambient sound volume"
+    },
+    "ambientMaxDistanceMerge": {
+      "type": "number",
+      "format": "float",
+      "description": "Adjacent ambient sound sources are merged to avoid playing too many sounds too loudly. This is the maximum distance a sound source can be from another to allow a merge."
+    },
+    "break": {
+      "description": "Played when this block is broken",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "./SoundAttributes.json#"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "FastVec3f",
+  "type": "object",
+  "properties": {
+    "x": {
+      "type": "number",
+      "format": "float",
+      "description": "The X-Component of the vector"
+    },
+    "y": {
+      "type": "number",
+      "format": "float",
+      "description": "The Y-Component of the vector"
+    },
+    "z": {
+      "type": "number",
+      "format": "float",
+      "description": "The Z-Component of the vector"
+    }
+  }
+}

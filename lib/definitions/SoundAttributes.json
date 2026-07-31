@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "SoundAttributes",
+  "oneOf": [
+    {
+      "type": "string"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "The location of the sound file"
+        },
+        "pitch": {
+          "allOf": [
+            {
+              "$ref": "./NatFloat.json#"
+            }
+          ],
+          "description": "Controls a random pitch for when the sound is played."
+        },
+        "range": {
+          "type": "number",
+          "format": "float",
+          "description": "The range at which the gain will be attenuated"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Sound",
+            "Music",
+            "Ambient",
+            "Weather",
+            "Entity",
+            "MusicGlitchunaffected",
+            "AmbientGlitchunaffected",
+            "SoundGlitchunaffected"
+          ],
+          "description": "The type of sound, used for volume control in the settings."
+        },
+        "volume": {
+          "allOf": [
+            {
+              "$ref": "./NatFloat.json#"
+            }
+          ],
+          "description": "Controls a random volume for when the sound is played."
+        }
+      }
+    }
+  ]
+}

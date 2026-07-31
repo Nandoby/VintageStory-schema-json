@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumSmeltType",
+  "$id": "EnumSmeltType.json",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "Smelt",
+      "title": "Smelt",
+      "description": "Currently has no special behavior"
+    },
+    {
+      "const": "Cook",
+      "title": "Cook",
+      "description": "Currently has no special behavior."
+    },
+    {
+      "const": "Bake",
+      "title": "Bake",
+      "description": "This collectible must be baked in a clay oven. Note that you will likely want to use BakingProperties in the item's attributes."
+    },
+    {
+      "const": "Convert",
+      "title": "Convert",
+      "description": "Currently has no special behavior."
+    },
+    {
+      "const": "Fire",
+      "title": "Fire",
+      "description": "This collectible must be fired in a kiln."
+    }
+  ]
+}

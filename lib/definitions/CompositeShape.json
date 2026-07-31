@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CompositeShape",
+  "properties": {
+    "alternates": {
+      "type": "array",
+      "description": "The block shape may consists of any amount of alternatives, one of which will be randomly chosen when the block is placed in the world",
+      "items": {
+        "$ref": "./CompositeShape.json#"
+      }
+    },
+    "bakedAlternates": {
+      "type": "array",
+      "description": "Includes the base shape",
+      "items": {
+        "$ref": "./CompositeShape.json#"
+      }
+    },
+    "base": {
+      "type": "string",
+      "description": "The path to this shape"
+    },
+    "format": {
+      "$ref": "./EnumShapeFormat.json#"
+    },
+    "insertBakedTextures": {
+      "type": "boolean",
+      "description": "Whether or not to insert baked in textures for mesh formats such as gltf into the texture atlas."
+    },
+    "offsetX": {
+      "type": "number",
+      "format": "float",
+      "description": "How much should this shape be offset on X axis?"
+    },
+    "offsetXYZCopy": {
+      "$ref": "./Vec3f.json#"
+    },
+    "offsetY": {
+      "type": "number",
+      "format": "float",
+      "description": "How much should this shape be offset on Y axis?"
+    },
+    "offsetZ": {
+      "type": "number",
+      "format": "float",
+      "description": "How much should this shape be offset on Z axis?"
+    },
+    "overlays": {
+      "type": "array",
+      "description": "The shape will render all overlays on top of this shape. Can be used to group multiple shapes into one composite shape.",
+      "items": {
+        "$ref": "./CompositeShape.json#"
+      }
+    },
+    "quantityElements": {
+      "type": ["integer", "null"],
+      "description": "If non zero will only tesselate the first n elements of the shape",
+      "format": "int32"
+    },
+    "rotateX": {
+      "type": "number",
+      "format": "float",
+      "description": "How much, in degrees, should this shape be rotated around the X axis?"
+    },
+    "rotateXYZCopy": {
+      "$ref": "./Vec3f.json#"
+    },
+    "rotateY": {
+      "type": "number",
+      "format": "float",
+      "description": "How much, in degrees, should this shape be rotated around the Y axis?"
+    },
+    "rotateZ": {
+      "type": "number",
+      "format": "float",
+      "description": "How much, in degrees, should this shape be rotated around the Z axis?"
+    },
+    "scale": {
+      "type": "number",
+      "format": "float"
+    },
+    "selectiveElements": {
+      "type": "array",
+      "description": "If set will only tesselate elements with given name",
+      "items": {
+        "type": "string"
+      }
+    },
+    "voxelizeTexture": {
+      "type": "boolean",
+      "description": "If true, the shape is created from a voxelized version of the first defined texture"
+    }
+  }
+}

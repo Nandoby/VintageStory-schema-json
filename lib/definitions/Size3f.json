@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Size3f",
+  "type": "object",
+  "properties": {
+    "height": {
+      "type": "number",
+      "format": "float",
+      "description": "The Y-dimension for this size"
+    },
+    "length": {
+      "type": "number",
+      "format": "float",
+      "description": "The Z-dimension for this size."
+    },
+    "width": {
+      "type": "number",
+      "format": "float",
+      "description": "The X-dimension of this size."
+    }
+  }
+}

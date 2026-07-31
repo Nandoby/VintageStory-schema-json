@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "RegistryObjectType",
+  "properties": {
+    "allowedVariants": {
+      "type": "array",
+      "description": "If set, only resolved code-variants in this list will be loaded by the game.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "class": {
+      "type": "string",
+      "description": "A reference to the registered C# class of the object. Can be used to add extra functionality to objects."
+    },
+    "enabled": {
+      "type": "boolean",
+      "description": "If set to false, this object will not be loaded."
+    },
+    "skipVariants": {
+      "type": "array",
+      "description": "A set of resolved code-variants that will not be loaded by the game",
+      "items": {
+        "type": "string"
+      }
+    },
+    "variantGroups": {
+      "type": "array",
+      "description": "All available variants for this object",
+      "items": {
+        "$ref": "./RegistryObjectVariantGroup.json#"
+      }
+    },
+    "interactions": {
+      "type": "array",
+      "description": "(Currently unused) A set of potential world interactions for this object. Used to display what the object is used for - e.g. Shift + Right Click to Knap Stones.",
+      "items": {
+        "$ref": "./WorldInteraction.json#"
+      }
+    }
+  }
+}

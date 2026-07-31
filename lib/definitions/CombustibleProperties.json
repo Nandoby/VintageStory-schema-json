@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CombustibleProperties",
+  "description": "Marks an item as combustible, either by cooking, smelting or firing. This can either imply it is used as a fuel, or can be cooked into another object.",
+  "properties": {
+    "meltingDuration": {
+      "type": "number",
+      "format": "float",
+      "description": "For how many seconds the temperature has to be above the melting point until the item is smelted. Recommended if SmeltedStack is set."
+    },
+    "meltingPoint": {
+      "type": "integer",
+      "format": "int32",
+      "description": "How many degrees celsius it takes to smelt/transform this collectible into another. Required if SmeltedStack is set."
+    },
+    "smeltedStack": {
+      "description": "If set, this is the resulting itemstack once the MeltingPoint has been reached for the supplied duration.",
+      "allOf": [
+        {
+          "$ref": "./JsonItemStack.json#"
+        }
+      ]
+    },
+    "smeltingType": {
+      "description": "Some smelt types have specific functionality, and are also used for correct naming in the tool tip. If using Bake, you will need to include Baking Properties in your item attributes.",
+      "allOf": [
+        {
+          "$ref": "./EnumSmeltType.json#"
+        }
+      ]
+    },
+    "burnDuration": {
+      "type": "number",
+      "format": "float",
+      "description": "The duration, in real life seconds, that this collectible burns for when used as a fuel."
+    },
+    "burnTemperature": {
+      "type": "integer",
+      "format": "int32",
+      "description": "The temperature at which this collectible burns when used as a fuel"
+    },
+    "heatResistance": {
+      "type": "integer",
+      "format": "int32",
+      "description": "How many degrees celsius it can resists before it ignites"
+    },
+    "maxTemperature": {
+      "type": "integer",
+      "format": "int32",
+      "description": "If there is a melting point, the max temperature it can reach. A value of 0 implies no limit"
+    },
+    "requiresContainer": {
+      "type": "boolean",
+      "description": "If true, a container is required to smelt this item."
+    },
+    "smeltedRatio": {
+      "type": "integer",
+      "format": "int32",
+      "description": "How many of this collectible are needed to smelt into SmeltedStack"
+    },
+    "smokeLevel": {
+      "type": "number",
+      "format": "float",
+      "description": "How much smoke this item produces when being used as fuel"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "VertexFlags",
+  "type": "object",
+  "properties": {
+    "all": {
+      "type": "integer",
+      "format": "int32",
+      "description": "Sets all the vertex flags from one integer"
+    },
+    "glowLevel": {
+      "type": "integer",
+      "format": "byte"
+    },
+    "lod0": {
+      "type": "boolean"
+    },
+    "normal": {
+      "type": "boolean"
+    },
+    "reflective": {
+      "type": "boolean"
+    },
+    "windData": {
+      "type": "integer",
+      "format": "byte"
+    },
+    "windMode": {
+      "$ref": "./EnumWindBitMode.json#"
+    },
+    "zOffset": {
+      "type": "integer",
+      "format": "byte"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "VintageStory - propriétés complémentaires",
+  "type": "object",
+  "properties": {
+    "variantgroups": {
+      "type": "array",
+      "description": "Defines groups of variants that get combined to produce the final set of item/block codes.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Identifier for this variant group, used as the {code} placeholder in the item/block code pattern"
+          },
+          "states": {
+            "type": "array",
+            "description": "A list of all the valid states for this variant.",
+            "items": { "type": "string" }
+          },
+          "combine": {
+            "type": "string",
+            "description": "How this variant combines with other variant types to create individual objects.",
+            "enum": ["Multiply", "Add", "SelectiveMultiply"],
+            "default": "Multiply"
+          },
+          "onVariant": {
+            "type": "string",
+            "description": "Required if using \"SelectiveMultiply\" in \"Combine\""
+          },
+          "loadFromProperties": {
+            "type": "string",
+            "description": "If set, copies a WorldProperties asset to create variants from."
+          },
+          "loadFromPropertiesCombine": {
+            "type": "array",
+            "description": "A set of world properties to combine to create variants from"
+          }
+        },
+        "required": ["code"],
+        "additionalItems": false
+      }
+    }
+  }
+}

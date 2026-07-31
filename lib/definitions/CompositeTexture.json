@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "CompositeTexture",
+  "type": "object",
+  "properties": {
+    "base": {
+      "type": "string",
+      "description": "The basic texture for this composite texture"
+    },
+    "alpha": {
+      "type": "number",
+      "format": "int32",
+      "description": "Can be used to modify the opacity of the texture. 255 is fully opaque, 0 is fully transparent."
+    },
+    "alternates": {
+      "type": "array",
+      "description": "The texture may consists of any amount of alternatives, one of which will be randomly chosen when the block is placed in the world.",
+      "items": {
+        "$ref": "./CompositeTexture.json#"
+      }
+    },
+    "blendedOverlays": {
+      "type": "array",
+      "description": "A set of textures to overlay above this texture. The base texture may be overlayed with any quantity of textures. These are baked together during texture atlas creation.",
+      "items": {
+        "$ref": "./BlendedOverlayTexture.json#"
+      }
+    },
+    "rotation": {
+      "type": "number",
+      "format": "int32",
+      "description": "Rotation of the texture may only be a multiple of 90"
+    },
+    "tiles": {
+      "type": "array",
+      "description": "A way of basic support for connected textures. Textures should be named numerically from 1 to TilesWidth squared. E.g., if TilesWidth is 3, the order follows the pattern of:\n1 2 3\n4 5 6\n7 8 9",
+      "items": {
+        "$ref": "./CompositeTexture.json#"
+      }
+    },
+    "tilesWidth": {
+      "type": "number",
+      "format": "int32",
+      "description": "The number of tiles in one direction that make up the full connected textures defined in Tiles."
+    },
+    "overlays": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Obsolete. Use BlendedOverlays instead."
+    }
+  },
+  "required": ["base"],
+  "additionalProperties": false
+}

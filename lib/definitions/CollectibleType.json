@@ -1,0 +1,206 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "CollectibleType.json",
+  "title": "CollectibleType",
+  "allOf": [
+    {
+      "$ref": "./RegistryObjectType.json#"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "attackPower": {
+          "type": "number",
+          "format": "float",
+          "description": "How much damage this collectible deals when used as a weapon."
+        },
+        "attackRange": {
+          "type": "number",
+          "format": "float",
+          "description": "The maximum distance an entity can be for you to attack it with this object."
+        },
+        "attributes": {
+          "$ref": "../assets/blocktypes-attributes.json#"
+        },
+        "behaviors": {
+          "type": "array",
+          "description": "Modifiers that can alter the behavior of the item or block, mostly for held interactions",
+          "items": {
+            "$ref": "./CollectibleBehaviorType.json"
+          }
+        },
+        "combustibleProps": {
+          "$ref": "./CombustibleProperties.json#"
+        },
+        "creativeInventory": {
+          "type": "object",
+          "description": "A list of creative tabs and variant codes for each",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "creativeInventoryStacks": {
+          "type": "array",
+          "description": "A list of specific item stacks to place in specific creative tabs",
+          "items": {
+            "$ref": "./CreativeTabAndStackList.json#"
+          }
+        },
+        "crushingProps": {
+          "$ref": "./CrushingProperties.json#"
+        },
+        "damagedBy": {
+          "type": "array",
+          "description": "From which damage sources does the item takes durability damage.",
+          "items": {
+            "$ref": "./EnumItemDamageSource.json#"
+          }
+        },
+        "dimensions": {
+          "$ref": "./Size3f.json#"
+        },
+        "durability": {
+          "type": "integer",
+          "format": "int32",
+          "description": "How many uses does this collectible has when being used. Item disappears at durability 0"
+        },
+        "fpHandTransform": {
+          "$ref": "./ModelTransform.json#"
+        },
+        "grindingProps": {
+          "$ref": "./GrindingProperties.json#"
+        },
+        "groundTransform": {
+          "$ref": "./ModelTransform.json#"
+        },
+        "guiTransform": {
+          "$ref": "./ModelTransform.json#"
+        },
+        "heldLeftReadyAnimation": {
+          "type": "string",
+          "description": "The animation to play in 3rd person when returning to idle from use in the left hand."
+        },
+        "heldLeftTpIdleAnimation": {
+          "type": "string",
+          "description": "The animation to play in 3rd person mode when holding this collectible in the left hand"
+        },
+        "heldRightReadyAnimation": {
+          "type": "string",
+          "description": "The animation to play in 3rd person when returning to idle from use in the right hand."
+        },
+        "heldRightTpIdleAnimation": {
+          "type": "string",
+          "description": "The animation to play in 3rd person mode when holding this collectible in the right hand"
+        },
+        "heldSounds": {
+          "$ref": "./HeldSounds.json#"
+        },
+        "heldTpHitAnimation": {
+          "type": "string",
+          "description": "The animation to play in 3rd person mode when hitting with this collectible"
+        },
+        "heldTpUseAnimation": {
+          "type": "string",
+          "description": "The animation to play in 3rd person mod when using this collectible"
+        },
+        "lightHsv": {
+          "type": "string",
+          "format": "byte",
+          "description": "For light emitting collectibles: hue, saturation and brightness value. See also http://tyron.at/vs/vslightwheel.html for all possible values."
+        },
+        "liquidSelectable": {
+          "type": "boolean",
+          "description": "When this item is held, can the player select liquids?"
+        },
+        "materialDensity": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Determines on whether an object floats on liquids or not. Water has a density of 1000"
+        },
+        "matterState": {
+          "$ref": "./EnumMatterState.json#"
+        },
+        "maxStackSize": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Max amount of collectible that one default inventory slot can hold"
+        },
+        "miningSpeed": {
+          "type": "object",
+          "description": "Modifies how fast the player can break a block when holding this item",
+          "x-dictionaryKey": {
+            "$ref": "./EnumBlockMaterial.json#"
+          },
+          "additionalProperties": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "nutritionProps": {
+          "$ref": "./FoodNutritionProperties.json#"
+        },
+        "particleProperties": {
+          "type": "array",
+          "description": "Particles that should spawn in regular intervals from this block or item when held in hands",
+          "items": {
+            "$ref": "./AdvancedParticleProperties.json#"
+          }
+        },
+        "renderAlphaTest": {
+          "type": "number",
+          "description": "Alpha test value for rendering in gui, fp hand, tp hand or on the ground",
+          "format": "float"
+        },
+        "shape": {
+          "$ref": "./CompositeShape.json#"
+        },
+        "storageFlags": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Determines in which kind of bags the item can be stored in."
+        },
+        "texture": {
+          "$ref": "./CompositeTexture.json#"
+        },
+        "textures": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "./CompositeTexture.json#"
+          }
+        },
+        "tool": {
+          "description": "If set, this item will be classified as given tool",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "./EnumTool.json#"
+            }
+          ]
+        },
+        "toolTier": {
+          "type": "integer",
+          "description": "The object can mine any blocks with the same or lower tier than this. If this object is a weapon, this also determines the object's damage tier.",
+          "format": "int32"
+        },
+        "tpHandTransform": {
+          "$ref": "./ModelTransform.json#"
+        },
+        "tpOffHandTransform": {
+          "$ref": "./ModelTransform.json#"
+        },
+        "transitionableProps": {
+          "type": "array",
+          "description": "Information about the transitionable states - Should this collectible turn into another item after a period of time?",
+          "items": {
+            "$ref": "./TransitionableProperties.json#"
+          }
+        }
+      }
+    }
+  ]
+}
