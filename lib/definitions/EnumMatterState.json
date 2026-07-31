@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumMatterState",
+  "$id": "EnumMatterState.json",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "Gas",
+      "title": "Gas",
+      "description": "The state of being so thin that molecules don't often touch"
+    },
+    {
+      "const": "Liquid",
+      "title": "Liquid",
+      "description": "The state of being still together but loose enough to move around each other"
+    },
+    {
+      "const": "Solid",
+      "title": "Solid",
+      "description": "The state of being together and held still by the internal structure"
+    },
+    {
+      "const": "Plasma",
+      "title": "Plasma",
+      "description": "The state of reacting with itself with some kind of reactant, a high heat state"
+    },
+    {
+      "const": "BoseEinsteinCondensate",
+      "title": "BoseEinsteinCondensate",
+      "description": "The state of becoming Quantum Jelly"
+    }
+  ]
+}

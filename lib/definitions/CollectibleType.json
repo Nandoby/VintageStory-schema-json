@@ -98,6 +98,10 @@
         "heldSounds": {
           "$ref": "./HeldSounds.json#"
         },
+        "heldSoundsByType": {
+          "type": "object",
+          "additionalProperties": { "$ref": "./HeldSounds.json#" }
+        },
         "heldTpHitAnimation": {
           "type": "string",
           "description": "The animation to play in 3rd person mode when hitting with this collectible"

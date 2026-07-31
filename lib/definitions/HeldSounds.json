@@ -1,5 +1,48 @@
 {
   "$schema": "https://json-schema.org/draft-07/schema#",
   "title": "HeldSounds",
-  "$id": "HeldSounds.json"
+  "$id": "HeldSounds.json",
+  "type": "object",
+  "properties": {
+    "attack": {
+      "description": "The path to a sound played when this item is used to attack",
+      "oneOf": [
+        {
+          "$ref": "./SoundAttributes.json#"
+        }
+      ]
+    },
+    "equip": {
+      "description": "The path to a sound played when this item is equipped.",
+      "oneOf": [
+        {
+          "$ref": "./SoundAttributes.json#"
+        }
+      ]
+    },
+    "idle": {
+      "description": "The path to a sound played when this item is being held",
+      "oneOf": [
+        {
+          "$ref": "./SoundAttributes.json#"
+        }
+      ]
+    },
+    "invPickup": {
+      "description": "The path to a sound played when this item is picked up in the inventory using the mouse.",
+      "oneOf": [
+        {
+          "$ref": "./SoundAttributes.json#"
+        }
+      ]
+    },
+    "unequip": {
+      "description": "The path to a sound played when this item is unequipped.",
+      "oneOf": [
+        {
+          "$ref": "./SoundAttributes.json#"
+        }
+      ]
+    }
+  }
 }
