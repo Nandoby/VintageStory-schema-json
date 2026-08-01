@@ -207,6 +207,14 @@
           "items": {
             "$ref": "./TransitionableProperties.json#"
           }
+        },
+        "transitionablePropsByType": {
+          "type": "object",
+          "description": "Information about the transitionable states - Should this collectible turn into another item after a period of time?",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "$ref": "./TransitionableProperties.json#" }
+          }
         }
       }
     }

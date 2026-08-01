@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumTransitionType",
+  "$id": "EnumTransitionType.json",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "Perish",
+      "title": "Perish",
+      "description": "For food, animals or non-organic materials"
+    },
+    {
+      "const": "Dry",
+      "title": "Dry",
+      "description": "Can be dried"
+    },
+    {
+      "const": "Burn",
+      "title": "Burn",
+      "description": "Can be burned"
+    },
+    {
+      "const": "Cure",
+      "title": "Cure",
+      "description": "Can be cured, for meat."
+    },
+    {
+      "const": "Convert",
+      "title": "Convert",
+      "description": "Generic 'other' conversion"
+    },
+    {
+      "const": "Ripen",
+      "title": "Ripen",
+      "description": "Cheese ripening"
+    },
+    {
+      "const": "Melt",
+      "title": "Melt",
+      "description": "Snow/ice melting"
+    },
+    {
+      "const": "Harden",
+      "title": "Harden",
+      "description": "Glue hardening"
+    },
+    {
+      "const": "None",
+      "title": "None",
+      "description": "Used for cooking recipes where the output has no perishableprops, but we still need a non-null TransitionableProperties (e.g. sulfuric acid in 1.20)"
+    }
+  ]
+}
