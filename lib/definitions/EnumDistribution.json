@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumDistribution",
+  "$id": "EnumDistribution.json",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "UNIFORM",
+      "title": "UNIFORM",
+      "description": "Select completely random numbers whithin avg-var until avg+var"
+    },
+    {
+      "const": "TRIANGLE",
+      "title": "TRIANGLE",
+      "description": "Select random numbers with numbers near avg being the most commonly selected ones, following a triangle curve"
+    },
+    {
+      "const": "GAUSSIAN",
+      "title": "GAUSSIAN",
+      "description": "Select random numbers with numbers near avg being the more commonly selected ones, following a gaussian curve"
+    },
+    {
+      "const": "NARROWGAUSSIAN",
+      "title": "NARROWGAUSSIAN",
+      "description": "Select random numbers with numbers near avg being the much more commonly selected ones, following a narrow gaussian curve"
+    },
+    {
+      "const": "VERYNARROWGAUSSIAN",
+      "title": "VERYNARROWGAUSSIAN",
+      "description": "Select random numbers with numbers near avg being the much much more commonly selected ones, following an even narrower gaussian curve"
+    },
+    {
+      "const": "NARROWINVERSEGAUSSIAN",
+      "title": "NARROWINVERSEGAUSSIAN",
+      "description": "Select random numbers with numbers near avg being the much less commonly selected ones, following an upside down gaussian curve"
+    },
+    {
+      "const": "INVEXP",
+      "title": "INVEXP",
+      "description": "Select random numbers in the form of avg + var, with numbers near avg being preferred"
+    },
+    {
+      "const": "STRONGINVEXP",
+      "title": "STRONGINVEXP",
+      "description": "Select random numbers in the form of avg + var, with numbers near avg being strongly preferred"
+    },
+    {
+      "const": "STRONGERINVEXP",
+      "title": "STRONGERINVEXP",
+      "description": "Select random numbers in the form of avg + var, with numbers near avg being very strongly preferred"
+    },
+    {
+      "const": "DIRAC",
+      "title": "DIRAC",
+      "description": "Select completely random numbers within avg-var until avg+var only ONCE and then always 0"
+    }
+  ]
+}

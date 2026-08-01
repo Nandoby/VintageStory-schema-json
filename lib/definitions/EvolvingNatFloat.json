@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EvolvingNatFloat",
+  "$id": "EvolvingNatFloat.json",
+  "type": "object",
+  "properties": {
+    "factor": {
+      "description": "A scale factor for the value during the transformation function.",
+      "type": "number",
+      "format": "float"
+    },
+    "maxvalue": {
+      "description": "The maximum value this random value can return",
+      "type": ["number", "null"],
+      "format": "float"
+    },
+    "transform": {
+      "description": "The type of function to use as this value changes.",
+      "allOf": [
+        {
+          "$ref": "./EnumTransformFunction.json#"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "NatFloat",
+  "$id": "NatFloat.json",
+  "type": "object",
+  "properties": {
+    "avg": {
+      "description": "The average value for the random float",
+      "type": "number",
+      "format": "float"
+    },
+    "var": {
+      "description": "The variation for the random float",
+      "type": "number",
+      "format": "float"
+    },
+    "dist": {
+      "description": "The type of distribution to use that determines the commodity of values.",
+      "allOf": [
+        {
+          "$ref": "./EnumDistribution.json#"
+        }
+      ]
+    },
+    "offset": {
+      "description": "A full offset to apply to any values returned",
+      "type": "number",
+      "format": "float"
+    }
+  }
+}

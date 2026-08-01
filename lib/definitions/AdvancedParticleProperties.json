@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "AdvancedParticleProperties",
+  "$id": "AdvancedParticleProperties.json",
+  "type": "object",
+  "properties": {
+    "blueEvolve": {
+      "description": "A transforming Blue value",
+      "allOf": [
+        {
+          "$ref": "./EvolvingNatFloat.json#"
+        }
+      ]
+    },
+    "bounciness": {
+      "description": "The amount of velocity to be kept when this particle collides with something. Directional velocity is multipled by (-Bounciness * 0.65) on any collision.",
+      "type": "number",
+      "format": "float"
+    },
+    "colorByBlock": {
+      "description": "Whether or not to color the particle by the block it's on.",
+      "type": "boolean"
+    },
+    "deathParticles": {
+      "description": "More particles that spawn when this particle dies.",
+      "type": "array",
+      "items": {
+        "$ref": "./AdvancedParticleProperties.json#"
+      }
+    },
+    "dieInAir": {
+      "description": "Whether or not the particle dies in air",
+      "type": "boolean"
+    },
+    "dieInLiquid": {
+      "description": "Whether or not the particle dies in water",
+      "type": "boolean"
+    },
+    "dieOnRainHeightmap": {
+      "description": "If true, particle dies if it falls below the rain height at its given location",
+      "type": "boolean"
+    },
+    "gravityEffect": {
+      "description": "The gravity effect on the particle",
+      "allOf": [
+        {
+          "$ref": "./NatFloat.json#"
+        }
+      ]
+    },
+    "greenEvolve": {
+      "description": "A transforming Green value",
+      "allOf": [
+        {
+          "$ref": "./EvolvingNatFloat.json#"
+        }
+      ]
+    },
+    "hsvaColor": {
+      "description": "The Hue/Saturation/Value/Alpha for the color of the particle.",
+      "type": "array",
+      "items": {
+        "$ref": "./NatFloat.json#"
+      }
+    },
+    "lifeLength": {
+      "description": "The life length, in seconds, of the particle",
+      "allOf": [
+        {
+          "$ref": "./NatFloat.json#"
+        }
+      ]
+    },
+    "opacityEvolve": {
+      "description": "A transforming opacity value.",
+      "allOf": [
+        {
+          "$ref": "./EvolvingNatFloat.json#"
+        }
+      ]
+    },
+    "particleModel": {
+      "description": "Sets the base model for the particle.",
+      "allOf": [
+        {
+          "$ref": "./EnumParticleModel.json#"
+        }
+      ]
+    },
+    "posOffset": {
+      "description": "Offset from the blocks hitboxes top middle position",
+      "type": "array",
+      "items": {
+        "$ref": "./NatFloat.json#"
+      }
+    },
+    "quantity": {
+      "description": "The quantity of the particles given.",
+      "allOf": [
+        {
+          "$ref": "./NatFloat.json#"
+        }
+      ]
+    },
+    "randomVelocityChange": {
+      "description": "Allows each particle to randomly change its velocity over time.",
+      "type": "boolean"
+    },
+    "redEvolve": {
+      "description": "A transforming Red value",
+      "allOf": [
+        {
+          "$ref": "./EvolvingNatFloat.json#"
+        }
+      ]
+    },
+    "secondaryParticles": {
+      "description": "More particles that spawn from this particle over time. See SecondarySpawnInterval to control rate",
+      "type": "array",
+      "items": {
+        "$ref": "./AdvancedParticleProperties.json#"
+      }
+    },
+    "secondarySpawnInterval": {
+      "description": "The interval that the SecondaryParticles spawn",
+      "allOf": [
+        {
+          "$ref": "./NatFloat.json#"
+        }
+      ]
+    },
+    "selfPropelled": {
+      "description": "Whether or not the particle is self propelled",
+      "type": "boolean"
+    },
+    "size": {
+      "description": "The size of the particles given.",
+      "allOf": [
+        {
+          "$ref": "./NatFloat.json#"
+        }
+      ]
+    },
+    "sizeEvolve": {
+      "description": "A transforming Size value",
+      "allOf": [
+        {
+          "$ref": "./EvolvingNatFloat.json#"
+        }
+      ]
+    },
+    "swimOnLiquid": {
+      "description": "Whether or not the particle floats on liquids.",
+      "type": "boolean"
+    },
+    "terrainCollision": {
+      "description": "Whether or not the particle collides with the terrain",
+      "type": "boolean"
+    },
+    "velocity": {
+      "description": "The velocity of the particles",
+      "type": "array",
+      "items": {
+        "$ref": "./NatFloat.json#"
+      }
+    },
+    "velocityEvolve": {
+      "description": "A dynamic velocity value.",
+      "type": "array",
+      "items": {
+        "$ref": "./EvolvingNatFloat.json#"
+      }
+    },
+    "vertexFlags": {
+      "description": "The level of glow in the particle",
+      "type": "integer",
+      "format": "int32"
+    },
+    "windAffectednes": {
+      "description": "How much the particles are affected by wind.",
+      "type": "number",
+      "format": "float"
+    }
+  }
+}

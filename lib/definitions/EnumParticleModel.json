@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumParticleModel",
+  "$id": "EnumParticleModel.json",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "Quad",
+      "title": "Quad",
+      "description": "A 2D quad."
+    },
+    {
+      "const": "Cube",
+      "title": "Cube",
+      "description": "A 3D cube."
+    }
+  ]
+}
