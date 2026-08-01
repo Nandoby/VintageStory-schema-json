@@ -215,11 +215,14 @@
             "type": "boolean"
           }
         },
-        "sideSolidOpaqueAo": {
+        "sideSolidByType": {
           "type": "object",
           "additionalProperties": {
-            "type": "boolean"
+            "$ref": "#/allOf/1/properties/sideSolid"
           }
+        },
+        "sideSolidOpaqueAo": {
+          "type": "object"
         },
         "sounds": {
           "$ref": "../lib/definitions/BlockSounds.json#"

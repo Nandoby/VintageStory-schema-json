@@ -165,6 +165,10 @@
         "shape": {
           "$ref": "./CompositeShape.json#"
         },
+        "shapeByType": {
+          "type": "object",
+          "additionalProperties": { "$ref": "./CompositeShape.json#" }
+        },
         "storageFlags": {
           "type": "integer",
           "format": "int32",
@@ -197,6 +201,10 @@
         },
         "tpHandTransform": {
           "$ref": "./ModelTransform.json#"
+        },
+        "tpHandTransformByType": {
+          "type": "object",
+          "additionalProperties": { "$ref": "./ModelTransform.json#" }
         },
         "tpOffHandTransform": {
           "$ref": "./ModelTransform.json#"

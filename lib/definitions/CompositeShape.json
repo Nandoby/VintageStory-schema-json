@@ -57,6 +57,10 @@
       "format": "float",
       "description": "How much, in degrees, should this shape be rotated around the Y axis?"
     },
+    "rotateYByType": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/properties/rotateY" }
+    },
     "rotateZ": {
       "type": "number",
       "format": "float",

@@ -5,7 +5,7 @@
   "properties": {
     "ambient": {
       "type": "string",
-      "description": "Played in ambience for this block."
+      "description": "Played in ambiance for this block"
     },
     "ambientBlockCount": {
       "type": "number",
@@ -17,16 +17,28 @@
       "format": "float",
       "description": "Adjacent ambient sound sources are merged to avoid playing too many sounds too loudly. This is the maximum distance a sound source can be from another to allow a merge."
     },
-    "break": {
-      "description": "Played when this block is broken",
-      "anyOf": [
+    "ambientSoundType": {
+      "description": "The type of sound for this block's ambient sound.",
+      "allOf": [
         {
-          "type": "string"
-        },
+          "$ref": "./EnumSoundType.json#"
+        }
+      ]
+    },
+    "break": {
+      "description": "Played when this block is broken.",
+      "allOf": [
         {
           "$ref": "./SoundAttributes.json#"
         }
       ]
+    },
+    "byTool": {
+      "description": "Gets the sound that occurs when a specific tool hits a block. (Note for coders: if none specified in the JSON, this will be null from version 1.20.4 onwards)",
+      "properties": {
+        "Knife": { "$ref": "./BlockSounds.json#" },
+        "Pickaxe": { "$ref": "./BlockSounds.json#" }
+      }
     }
   }
 }
