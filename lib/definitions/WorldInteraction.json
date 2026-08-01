@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "WorldInteraction",
+  "$id": "WorldInteraction",
+  "type": "object",
+  "properties": {
+    "actionLangCode": {
+      "description": "The text to show, will be used in the form of Lang.Get(ActionLangCode)",
+      "type": "string"
+    },
+    "mouseButton": {
+      "description": "What mouse button should be used for this interaction?",
+      "allOf": [
+        {
+          "$ref": "./EnumMouseButton.json#"
+        }
+      ]
+    },
+    "hotKeyCode": {
+      "description": "Does it require a mouse modifier key to perform this action (e.g. \"shift\" or \"ctrl\")",
+      "type": "string"
+    },
+    "hotKeyCodes": {
+      "description": "Does it require pressing multiple keys to perform this action (if set then HotkeyCode is ignored)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "itemStacks": {
+      "description": "Does the player need to hold a certain items/blocks in hands? (e.g. a knife). You can define an array of item stacks here and the game will loop through them in a 1 second interval. This property is loaded from the entitytypes and blocktype json files and then resolved.",
+      "type": "array",
+      "items": { "$ref": "./JsonItemStack.json#" }
+    }
+  }
+}

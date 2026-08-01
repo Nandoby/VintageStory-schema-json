@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumMouseButton",
+  "$id": "EnumMouseButton",
+  "type": "string",
+  "enum": [
+    "Left",
+    "Middle",
+    "Right",
+    "Button4",
+    "Button5",
+    "Button6",
+    "Button7",
+    "Button8",
+    "Wheel",
+    "None"
+  ]
+}
