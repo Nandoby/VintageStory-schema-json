@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Size2i",
+  "$id": "Size2i",
+  "description": "Represents a vector of 2 doubles. Go bug Tyron of you need more utility methods in this class",
+  "properties": {
+    "height": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "width": {
+      "type": "integer",
+      "format": "int32"
+    }
+  }
+}
