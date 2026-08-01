@@ -8,7 +8,7 @@
       "description": "Tree Attributes that should be attached to the resulting itemstack",
       "oneOf": [
         {
-          "$ref": "./JsonObject.json#"
+          "$ref": "../assets/blocktypes-attributes.json#"
         }
       ]
     },
@@ -29,14 +29,6 @@
       "oneOf": [
         {
           "$ref": "./NatFloat.json#"
-        }
-      ]
-    },
-    "resolvedItemstack": {
-      "description": "The resulting ItemStack for this block being broken by a tool.",
-      "oneOf": [
-        {
-          "$ref": "./ItemStack.json#"
         }
       ]
     },

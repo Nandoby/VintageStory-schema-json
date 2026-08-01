@@ -9,13 +9,6 @@
         "$ref": "./CompositeShape.json#"
       }
     },
-    "bakedAlternates": {
-      "type": "array",
-      "description": "Includes the base shape",
-      "items": {
-        "$ref": "./CompositeShape.json#"
-      }
-    },
     "base": {
       "type": "string",
       "description": "The path to this shape"
@@ -31,9 +24,6 @@
       "type": "number",
       "format": "float",
       "description": "How much should this shape be offset on X axis?"
-    },
-    "offsetXYZCopy": {
-      "$ref": "./Vec3f.json#"
     },
     "offsetY": {
       "type": "number",
@@ -61,9 +51,6 @@
       "type": "number",
       "format": "float",
       "description": "How much, in degrees, should this shape be rotated around the X axis?"
-    },
-    "rotateXYZCopy": {
-      "$ref": "./Vec3f.json#"
     },
     "rotateY": {
       "type": "number",

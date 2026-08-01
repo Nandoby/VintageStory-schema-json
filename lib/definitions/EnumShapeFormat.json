@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "EnumShapeFormat",
+  "$id": "EnumShapeFormat.json",
+  "type": "string",
+  "oneOf": [
+    {
+      "const": "VintageStory",
+      "title": "VintageStory",
+      "description": "(Recommended) Imports à shape using the default JSON system"
+    },
+    {
+      "const": "Obj",
+      "title": "Obj",
+      "description": "Imports a shape using an Obj file"
+    },
+    {
+      "const": "GltfEmbedded",
+      "title": "GltfEmbedded",
+      "description": "Imports a shape using a Gltf file."
+    }
+  ]
+}
